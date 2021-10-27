@@ -1,0 +1,23 @@
+
+#ifndef _C18_ha870_
+#define _C18_ha870_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_NATURAL_32 F761_5203(EIF_REFERENCE);
+extern EIF_POINTER F761_5204(EIF_REFERENCE);
+extern EIF_BOOLEAN F761_5206(EIF_REFERENCE);
+extern void F761_5207(EIF_REFERENCE);
+extern EIF_REFERENCE F761_5208(EIF_REFERENCE);
+extern void EIF_Minit870(void);
+extern EIF_BOOLEAN F681_5134(EIF_REFERENCE);
+extern EIF_INTEGER_32 F598_3968(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F598_3969(EIF_REFERENCE, EIF_INTEGER_32);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

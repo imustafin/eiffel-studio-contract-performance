@@ -1,0 +1,30 @@
+
+#ifndef _C4_st179_
+#define _C4_st179_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F641_5048(EIF_REFERENCE, EIF_REFERENCE);
+extern void F641_5049(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+extern EIF_CHARACTER_32 F641_5050(EIF_REFERENCE);
+extern EIF_INTEGER_32 F641_5051(EIF_REFERENCE);
+extern EIF_REFERENCE F641_5052(EIF_REFERENCE);
+extern EIF_BOOLEAN F641_5053(EIF_REFERENCE);
+extern void F641_5054(EIF_REFERENCE);
+extern void F641_5055(EIF_REFERENCE);
+extern EIF_REFERENCE F641_5056(EIF_REFERENCE);
+extern EIF_INTEGER_32 F641_5057(EIF_REFERENCE);
+extern EIF_INTEGER_32 F641_5058(EIF_REFERENCE);
+extern void F641_1(EIF_REFERENCE, int);
+extern void EIF_Minit179(void);
+extern EIF_REFERENCE F1_14(EIF_REFERENCE);
+extern char *(*R4681[])();
+extern char *(*R4645[])();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,25 @@
+
+#ifndef _C5_co243_
+#define _C5_co243_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F899_7032(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F899_7035(EIF_REFERENCE);
+extern EIF_INTEGER_32 F899_7036(EIF_REFERENCE);
+extern void F899_7037(EIF_REFERENCE);
+extern void F899_7058(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_POINTER F899_7069(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F899_7076(EIF_REFERENCE, EIF_POINTER, EIF_POINTER, EIF_INTEGER_32);
+extern void F899_7090(EIF_REFERENCE, EIF_POINTER);
+extern void EIF_Minit243(void);
+extern void F622_4917(EIF_REFERENCE);
+extern void F622_4692(EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

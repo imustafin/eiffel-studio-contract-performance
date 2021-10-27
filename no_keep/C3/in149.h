@@ -1,0 +1,22 @@
+
+#ifndef _C3_in149_
+#define _C3_in149_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_INTEGER_32 F443_3140(EIF_REFERENCE);
+extern EIF_INTEGER_32 F443_3142(EIF_REFERENCE);
+extern EIF_BOOLEAN F443_3146(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F443_3148(EIF_REFERENCE);
+extern EIF_INTEGER_32 F443_3149(EIF_REFERENCE);
+extern EIF_BOOLEAN F443_3151(EIF_REFERENCE, EIF_REFERENCE);
+extern void F443_3165(EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit149(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

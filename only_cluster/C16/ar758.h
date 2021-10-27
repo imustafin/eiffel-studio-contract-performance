@@ -1,0 +1,25 @@
+
+#ifndef _C16_ar758_
+#define _C16_ar758_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F734_5192(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F734_5193(EIF_REFERENCE);
+extern EIF_REFERENCE F734_5194(EIF_REFERENCE);
+extern EIF_BOOLEAN F734_5195(EIF_REFERENCE);
+extern EIF_REFERENCE F734_5196(EIF_REFERENCE);
+extern EIF_INTEGER_32 F734_5197(EIF_REFERENCE);
+extern void EIF_Minit758(void);
+extern EIF_INTEGER_32 F702_5157(EIF_REFERENCE);
+extern EIF_BOOLEAN F702_5165(EIF_REFERENCE);
+extern EIF_TYPE_INDEX Y3713[];
+extern EIF_TYPE_INDEX *Y3713_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,21 @@
+
+#ifndef _C20_ti965_
+#define _C20_ti965_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_INTEGER_32 F37_7283(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F37_7284(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+static EIF_REFERENCE F37_7285_body(EIF_REFERENCE);
+extern EIF_REFERENCE F37_7285(EIF_REFERENCE);
+extern EIF_REFERENCE F37_7286(EIF_REFERENCE);
+extern void EIF_Minit965(void);
+extern EIF_REFERENCE F31_7251(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

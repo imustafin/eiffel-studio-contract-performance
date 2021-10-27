@@ -1,0 +1,26 @@
+
+#ifndef _C20_da980_
+#define _C20_da980_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_INTEGER_32 F595_7526(EIF_REFERENCE);
+extern EIF_INTEGER_32 F595_7527(EIF_REFERENCE);
+extern EIF_INTEGER_32 F595_7528(EIF_REFERENCE);
+extern void F595_7531(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32, EIF_INTEGER_32);
+extern void F595_7537(EIF_REFERENCE);
+extern EIF_REFERENCE F595_7544(EIF_REFERENCE);
+extern void F595_7545(EIF_REFERENCE, EIF_INTEGER_32);
+extern void EIF_Minit980(void);
+extern EIF_REFERENCE F593_3857(EIF_REFERENCE);
+extern void F593_3856(EIF_REFERENCE);
+extern EIF_REFERENCE F596_3929(EIF_REFERENCE, EIF_REFERENCE);
+extern long O5254[];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

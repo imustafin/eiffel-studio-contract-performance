@@ -1,0 +1,22 @@
+
+#ifndef _C3_co108_
+#define _C3_co108_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_BOOLEAN F115_1562(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F115_1563(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F115_1564(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F115_1565(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F115_1567(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F115_1568(EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit108(void);
+extern char *(*R1384[])();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
