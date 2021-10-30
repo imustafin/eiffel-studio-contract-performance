@@ -5,6 +5,8 @@ In this repository we compare the time performance of a project
 compiled with contracts enabled and disabled. Examples are compiled with
 EiffelStudio 19.5
 
+SCOOP disabled. Void checking in runtime disabled.
+
 ## Time comparison
 Iterations: _200000000_
 
@@ -14,11 +16,12 @@ All times are in seconds
 
 |name|avg|min|max|
 |---|---|---|---|
-|no_keep|0.655|0.638|0.712|
-|all_enabled|6.667|6.458|6.892|
-|only_target|3.079|2.866|3.515|
-|only_cluster|6.795|6.54|6.974|
-|all_disabled|3.089|2.867|3.391|
+|no_keep|0.581|0.577|0.584|
+|all_enabled|6.055|6.016|6.097|
+|only_target|2.673|2.648|2.707|
+|only_cluster|6.497|6.036|7.47|
+|all_disabled|2.895|2.805|3.291|
+
 
 All examples are compiled with `-finalize` option.
 
@@ -30,22 +33,22 @@ All examples are compiled with `-finalize` option.
 * __all_disabled__ has contracts disabled for both the target and the cluster
 
 We see that removing contracts from the code gives use the benchmark
-time of __0.7__ seconds on average.
+time of __0.6__ seconds on average.
 
 The __all_enabled__ example and the __only_cluster__ examples effectively
 evaluate the contracts. This gives us the time of the program with contracts at
-around __6.8__ seconds.
+around __6.25__ seconds (the average).
 
 The __only_target__ example effectively disables the contract checking for
 the root class (enabled for the target but disables for the actual code).
 Together with the __all_disabled__ example this gives us the time of around
-__3__ seconds to run the program with contracts disabled.
+__2.7__ (the average) seconds to run the program with contracts disabled.
 
-So, compiling with contracts increases the time from 0.7 to 3 seconds =>
-__4.28__ times increase.
+So, compiling with contracts increases the time from 0.6 to 2.7 seconds =>
+__4.5__ times increase.
 
-Enabling the contracts increases the time from 3 to 6.8 seconds =>
-further __2.26__ times increase.
+Enabling the contracts increases the time from 2.7 to 6.25 seconds =>
+further __2.31__ times increase.
 
 ## Code comparison
 The finalized C code is also present in this repository

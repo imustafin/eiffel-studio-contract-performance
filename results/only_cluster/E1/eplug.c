@@ -124,7 +124,7 @@ void egc_init_plug (void)
 	egc_system_name = "eiffel-studio-contract-timing";
 	egc_system_location = "/home/ilgiz/eiffel-studio-contract-performance/EIFGENs/eiffel-studio-contract-timing/F_code";
 	egc_compiler_tag = 38;
-	egc_project_version = 1635588598;
+	egc_project_version = 1635637083;
 	egc_has_old_special_semantic = 0;
 	scount = 788;
 

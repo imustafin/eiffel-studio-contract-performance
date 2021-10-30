@@ -64,10 +64,11 @@ def run_example(doc, name, keep)
 
   raise 'Could not compile' unless compiled
 
-  FileUtils.rm_rf(name)
-  f_code = "EIFGENs/#{PRJ}/F_code"
   FileUtils.mkdir_p('results')
-  FileUtils.copy_entry(f_code, "results/#{name}")
+  results_name = "results/#{name}"
+  FileUtils.rm_rf(results_name)
+  f_code = "EIFGENs/#{PRJ}/F_code"
+  FileUtils.copy_entry(f_code, results_name)
 
   runs = []
   ans = {

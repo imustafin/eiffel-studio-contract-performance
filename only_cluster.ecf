@@ -12,6 +12,7 @@
 		<option warning="true" manifest_array_type="mismatch_warning">
 			<assertions precondition="false" postcondition="false" check="false" invariant="false" loop="false" supplier_precondition="false"/>
 		</option>
+		<setting name="check_for_void_target" value="false"/>
 		<setting name="console_application" value="true"/>
 		<setting name="dead_code_removal" value="feature"/>
 		<capability>
