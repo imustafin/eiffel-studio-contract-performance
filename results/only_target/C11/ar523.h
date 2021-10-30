@@ -1,0 +1,25 @@
+
+#ifndef _C11_ar523_
+#define _C11_ar523_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F261_2047(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F261_2048(EIF_REFERENCE);
+extern EIF_REFERENCE F261_2049(EIF_REFERENCE);
+extern EIF_BOOLEAN F261_2050(EIF_REFERENCE);
+extern EIF_REFERENCE F261_2051(EIF_REFERENCE);
+extern EIF_INTEGER_32 F261_2052(EIF_REFERENCE);
+extern void EIF_Minit523(void);
+extern EIF_BOOLEAN F235_2020(EIF_REFERENCE);
+extern EIF_INTEGER_32 F235_2012(EIF_REFERENCE);
+extern EIF_TYPE_INDEX Y1725[];
+extern EIF_TYPE_INDEX *Y1725_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

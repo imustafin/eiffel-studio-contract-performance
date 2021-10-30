@@ -1,0 +1,27 @@
+
+#ifndef _C6_li282_
+#define _C6_li282_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_BOOLEAN F535_2680(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F535_2681(EIF_REFERENCE);
+extern void EIF_Minit282(void);
+extern EIF_BOOLEAN F344_2122(EIF_REFERENCE);
+extern char *(*R1847[])();
+extern char *(*R1891[])();
+extern char *(*R1854[])();
+extern char *(*R1858[])();
+extern char *(*R1860[])();
+extern char *(*R1865[])();
+extern char *(*R1908[])();
+extern char *(*R1910[])();
+extern long O1839[];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

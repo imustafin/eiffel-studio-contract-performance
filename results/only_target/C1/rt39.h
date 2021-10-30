@@ -1,0 +1,24 @@
+
+#ifndef _C1_rt39_
+#define _C1_rt39_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F57_813(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit39(void);
+extern void F562_2810(EIF_REFERENCE, EIF_REFERENCE);
+extern void F562_2821(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F534_2681(EIF_REFERENCE);
+extern void F562_2807(EIF_REFERENCE);
+extern EIF_REFERENCE F562_2785(EIF_REFERENCE);
+extern void F562_2774(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F562_2805(EIF_REFERENCE);
+extern EIF_REFERENCE F305_2102(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

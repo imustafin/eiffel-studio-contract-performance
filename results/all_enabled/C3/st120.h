@@ -1,0 +1,30 @@
+
+#ifndef _C3_st120_
+#define _C3_st120_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F182_1941(EIF_REFERENCE, EIF_REFERENCE);
+extern void F182_1942(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+extern EIF_CHARACTER_32 F182_1943(EIF_REFERENCE);
+extern EIF_INTEGER_32 F182_1944(EIF_REFERENCE);
+extern EIF_REFERENCE F182_1945(EIF_REFERENCE);
+extern EIF_BOOLEAN F182_1946(EIF_REFERENCE);
+extern void F182_1947(EIF_REFERENCE);
+extern void F182_1948(EIF_REFERENCE);
+extern EIF_REFERENCE F182_1949(EIF_REFERENCE);
+extern EIF_INTEGER_32 F182_1950(EIF_REFERENCE);
+extern EIF_INTEGER_32 F182_1951(EIF_REFERENCE);
+extern void F182_1(EIF_REFERENCE, int);
+extern void EIF_Minit120(void);
+extern EIF_REFERENCE F1_14(EIF_REFERENCE);
+extern char *(*R3352[])();
+extern char *(*R3388[])();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

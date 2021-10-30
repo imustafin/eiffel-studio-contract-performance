@@ -1,0 +1,22 @@
+
+#ifndef _C3_in129_
+#define _C3_in129_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_INTEGER_32 F497_2539(EIF_REFERENCE);
+extern EIF_INTEGER_32 F497_2541(EIF_REFERENCE);
+extern EIF_BOOLEAN F497_2545(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F497_2547(EIF_REFERENCE);
+extern EIF_INTEGER_32 F497_2548(EIF_REFERENCE);
+extern EIF_BOOLEAN F497_2550(EIF_REFERENCE, EIF_REFERENCE);
+extern void F497_2564(EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit129(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

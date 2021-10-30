@@ -21,7 +21,7 @@ feature {NONE} -- Initialization
 			i: INTEGER
 			n: INTEGER
 		do
-			n := 100_000_000
+			n := 200_000_000
 			create start_time.make_now
 			from
 				i := 0

@@ -1,0 +1,20 @@
+
+#ifndef _C5_pr230_
+#define _C5_pr230_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F766_4481(EIF_REFERENCE);
+extern void F766_4482(EIF_REFERENCE, EIF_REFERENCE);
+extern void F766_4483(EIF_REFERENCE, EIF_POINTER, EIF_POINTER, EIF_POINTER, EIF_POINTER, EIF_INTEGER_32, EIF_BOOLEAN, EIF_INTEGER_32, EIF_INTEGER_32, EIF_INTEGER_32, EIF_POINTER);
+extern void EIF_Minit230(void);
+extern EIF_BOOLEAN F765_4451(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F765_4463(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

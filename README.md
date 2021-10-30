@@ -6,7 +6,7 @@ compiled with contracts enabled and disabled. Examples are compiled with
 EiffelStudio 19.5
 
 ## Time comparison
-Iterations: _100000000_
+Iterations: _200000000_
 
 Runs of the same program: _10_
 
@@ -14,11 +14,11 @@ All times are in seconds
 
 |name|avg|min|max|
 |---|---|---|---|
-|no_keep|0.632|0.569|0.689|
-|all_enabled|4.647|4.37|4.894|
-|only_target|1.893|1.825|2.04|
-|only_cluster|4.734|4.463|5.243|
-|all_disabled|2.067|1.85|2.474|
+|no_keep|0.655|0.638|0.712|
+|all_enabled|6.667|6.458|6.892|
+|only_target|3.079|2.866|3.515|
+|only_cluster|6.795|6.54|6.974|
+|all_disabled|3.089|2.867|3.391|
 
 All examples are compiled with `-finalize` option.
 
@@ -30,42 +30,40 @@ All examples are compiled with `-finalize` option.
 * __all_disabled__ has contracts disabled for both the target and the cluster
 
 We see that removing contracts from the code gives use the benchmark
-time of __0.6__ seconds on average.
+time of __0.7__ seconds on average.
 
 The __all_enabled__ example and the __only_cluster__ examples effectively
 evaluate the contracts. This gives us the time of the program with contracts at
-aroudn __4.7__ seconds.
+around __6.8__ seconds.
 
 The __only_target__ example effectively disables the contract checking for
 the root class (enabled for the target but disables for the actual code).
 Together with the __all_disabled__ example this gives us the time of around
-__2__ seconds to run the program with contracts disabled.
+__3__ seconds to run the program with contracts disabled.
 
-So, compiling with contracts increases the time from 0.6 to 2 seconds =>
-__3.33__ times increase.
+So, compiling with contracts increases the time from 0.7 to 3 seconds =>
+__4.28__ times increase.
 
-Enabling the contracts increases the time from 2 to 4.7 seconds =>
-further __2.35__ times increase.
+Enabling the contracts increases the time from 3 to 6.8 seconds =>
+further __2.26__ times increase.
 
 ## Code comparison
-**Disclaimer**: I'm haven't ever touched EiffelStudio's compiler before.
-Moreover, I'm not very knowledgeable about the C language and its compilers.
-What follows next is an outsider's interpretation of what is happening.
-
 The finalized C code is also present in this repository
-(directories `no_keep`, `all_enabled` etc.). This is to simplify
+(subdirectories of `results`: `no_keep`, `all_enabled` etc.).
+This is to simplify
 the browsing experience for anyone interested :smile:
 
+
 ### all_disabled vs only_target — no difference
-The produced C code is the same for the *all_disabled* and *only_target*
-examples! Even the compiled binaries are the same (which is expected).
+The produced C code differs only in the `egc_project_version` value.
+All the code is otherwise the same.
 
 Indeed, enabling contractss for the whole target and then disabling them
 for all clusters (the only cluster in this example), effectively disables
 contracts for the whole program.
 
 ### all_enabled vs only_cluster — no difference
-These examples also produce the same code and the same binary.
+Here again the only difference is the `egc_project_version`.
 
 Enabling contracts for both the whole cluster and once again
 for all its clusters
@@ -76,10 +74,10 @@ Discarding assertions by omitting `-keep` during compilation will result
 in all assertions-related code to be skipped during compilation to C.
 
 The easiest to observe is the `{APPLICATION}.work` feature. We will look
-at the diff of the `C20/ap978.c` file which contains the code for `APPLICATION`:
+at the diff of the `C3/ap124.c` file which contains the code for `APPLICATION`:
 ```diff
-diff -u <(sed -n '72,89p' no_keep/C20/ap978.c) <(sed -n '99,155p' all_disabled/C20/ap978.c)
- void F176_7488 (EIF_REFERENCE Current)
+diff -u <(sed -n '73,89p' results/no_keep/C3/ap124.c) <(sed -n '100,155p' results/all_disabled/C3/ap124.c)
+ void F280_2080 (EIF_REFERENCE Current)
  {
  	GTCX
 +	RTEX;
@@ -93,7 +91,7 @@ diff -u <(sed -n '72,89p' no_keep/C20/ap978.c) <(sed -n '99,155p' all_disabled/C
  	RTLR(0,Current);
  	RTLIU(1);
  	
-+	RTEAA("work", 175, Current, 0, 0, 13753);
++	RTEAA("work", 279, Current, 0, 0, 2802);
 +	RTSA(Dtype(Current));
 +	RTSC;
  	RTGC;
@@ -149,9 +147,9 @@ These two examples differ only in two files.
 
 The first file is `E1/eoption.c`.
 
-The only difference is the line 184:
+The only difference is the line 288:
 ```diff
-diff -u all_disabled/E1/eoption.c only_cluster/E1/eoption.c
+diff -u results/all_disabled/E1/eoption.c results/only_cluster/E1/eoption.c
  struct eif_opt egc_foption_init[] = {
  ...
 -{0, 0, 0, {OPT_ALL, 0, NULL}},
@@ -163,17 +161,17 @@ diff -u all_disabled/E1/eoption.c only_cluster/E1/eoption.c
 The array `egc_foption_init` is discussed later, you can skip directly
 to [the next part](#eiffel-options-eif_opt).
 
-#### Non-differences
+#### Semantically Non-differences
 This section is here for completeness sake. You may skip reading it.
 
-The second differing file is again `C20/ap978.c`.
+The second differing file is again `C3/ap124.c`.
 While the files differ, we don't see any difference in symantics.
 
 For example, the only difference in the `work` feature is using
 a temporary value to save the result of an expression (*only_cluster*)
 compared to using the whole expression in full:
 ```diff
-diff -u <(sed -n '99,155p' all_disabled/C20/ap978.c) <(sed -n '99,158p' only_cluster/C20/ap978.c)
+diff -u <(sed -n '100,155p' results/all_disabled/C3/ap124.c) <(sed -n '102,158p' results/only_cluster/C3/ap124.c)
 -	if ((EIF_BOOLEAN) (*(EIF_INTEGER_32 *)(Current+ _LNGOFF_0_0_0_0_) > ((EIF_INTEGER_32) 200L))) {
 +	ti4_1 = *(EIF_INTEGER_32 *)(Current+ _LNGOFF_0_0_0_0_);
 +	if ((EIF_BOOLEAN) (ti4_1 > ((EIF_INTEGER_32) 200L))) {
@@ -181,25 +179,25 @@ diff -u <(sed -n '99,155p' all_disabled/C20/ap978.c) <(sed -n '99,158p' only_clu
 
 Similar differences occur in the `make` feature:
 ```diff
-diff -u <(sed -n '60,91p' all_disabled/C20/ap978.c) <(sed -n '60,93p' only_cluster/C20/ap978.c)
--	loc1 = RTLNS(eif_new_type(904, 0x01).id, 904, _OBJSIZ_0_0_0_1_0_0_0_1_);
--	(nstcall = -1, F905_7629(RTCW(loc1)));
-+	tr1 = RTLNS(eif_new_type(904, 0x01).id, 904, _OBJSIZ_0_0_0_1_0_0_0_1_);
-+	(nstcall = -1, F905_7629(RTCW(tr1)));
+diff -u <(sed -n '60,91p' results/all_disabled/C3/ap124.c) <(sed -n '60,93p' results/only_cluster/C3/ap124.c)
+-	loc1 = RTLNS(eif_new_type(784, 0x01).id, 784, _OBJSIZ_0_0_0_1_0_0_0_1_);
+-	(nstcall = -1, F785_5095(RTCW(loc1)));
++	tr1 = RTLNS(eif_new_type(784, 0x01).id, 784, _OBJSIZ_0_0_0_1_0_0_0_1_);
++	(nstcall = -1, F785_5095(RTCW(tr1)));
 +	loc1 = (EIF_REFERENCE) tr1;
 
 ...
 
--	loc2 = RTLNS(eif_new_type(904, 0x01).id, 904, _OBJSIZ_0_0_0_1_0_0_0_1_);
--	(nstcall = -1, F905_7629(RTCW(loc2)));
-+	tr1 = RTLNS(eif_new_type(904, 0x01).id, 904, _OBJSIZ_0_0_0_1_0_0_0_1_);
-+	(nstcall = -1, F905_7629(RTCW(tr1)));
+-	loc2 = RTLNS(eif_new_type(784, 0x01).id, 784, _OBJSIZ_0_0_0_1_0_0_0_1_);
+-	(nstcall = -1, F785_5095(RTCW(loc2)));
++	tr1 = RTLNS(eif_new_type(784, 0x01).id, 784, _OBJSIZ_0_0_0_1_0_0_0_1_);
++	(nstcall = -1, F785_5095(RTCW(tr1)));
 +	loc2 = (EIF_REFERENCE) tr1;
 ```
 
 The last difference is in the begining of the `make` feature:
 ```diff
-diff -u <(sed -n '46,48p' all_disabled/C20/ap978.c) <(sed -n '46,48p' only_cluster/C20/ap978.c)
+diff -u <(sed -n '46,48p' results/all_disabled/C3/ap124.c) <(sed -n '46,48p' results/only_cluster/C3/ap124.c)
 -	RTLR(1,Current);
 -	RTLR(2,loc2);
 -	RTLR(3,tr1);

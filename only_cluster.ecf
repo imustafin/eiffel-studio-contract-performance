@@ -7,6 +7,7 @@
 			<exclude>/EIFGENs$</exclude>
 			<exclude>/\.git$</exclude>
 			<exclude>/\.svn$</exclude>
+			<exclude>/results$</exclude>
 		</file_rule>
 		<option warning="true" manifest_array_type="mismatch_warning">
 			<assertions precondition="false" postcondition="false" check="false" invariant="false" loop="false" supplier_precondition="false"/>
@@ -15,10 +16,9 @@
 		<setting name="dead_code_removal" value="feature"/>
 		<capability>
 			<catcall_detection support="none"/>
-			<concurrency support="scoop"/>
+			<concurrency support="none"/>
 			<void_safety support="all"/>
 		</capability>
-		<precompile name="base_pre" location="$ISE_PRECOMP\base-scoop-safe.ecf"/>
 		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
 		<library name="time" location="$ISE_LIBRARY\library\time\time.ecf"/>
 		<cluster name="eiffel-studio-contract-timing" location=".\" recursive="true"><option><assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/></option></cluster>

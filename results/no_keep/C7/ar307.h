@@ -1,0 +1,30 @@
+
+#ifndef _C7_ar307_
+#define _C7_ar307_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_BOOLEAN F561_2746(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F561_2747(EIF_REFERENCE);
+extern EIF_INTEGER_32 F561_2748(EIF_REFERENCE);
+extern void F561_2759(EIF_REFERENCE, EIF_REFERENCE);
+extern void F561_2766(EIF_REFERENCE);
+extern void EIF_Minit307(void);
+extern EIF_BOOLEAN F575_2866(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F560_2741(EIF_REFERENCE);
+extern void F560_2740(EIF_REFERENCE);
+extern EIF_REFERENCE F1_14(EIF_REFERENCE);
+extern EIF_REFERENCE F575_2864(EIF_REFERENCE, EIF_REFERENCE);
+RTOSHF(EIF_REFERENCE,2741)
+extern char *(*R2433[])();
+extern char *(*R2099[])();
+extern EIF_TYPE_INDEX Y1738[];
+extern EIF_TYPE_INDEX *Y1738_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

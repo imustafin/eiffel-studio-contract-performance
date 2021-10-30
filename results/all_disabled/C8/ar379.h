@@ -1,0 +1,25 @@
+
+#ifndef _C8_ar379_
+#define _C8_ar379_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F257_2047(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F257_2048(EIF_REFERENCE);
+extern EIF_REFERENCE F257_2049(EIF_REFERENCE);
+extern EIF_BOOLEAN F257_2050(EIF_REFERENCE);
+extern EIF_REFERENCE F257_2051(EIF_REFERENCE);
+extern EIF_INTEGER_32 F257_2052(EIF_REFERENCE);
+extern void EIF_Minit379(void);
+extern EIF_INTEGER_32 F231_2012(EIF_REFERENCE);
+extern EIF_BOOLEAN F231_2020(EIF_REFERENCE);
+extern EIF_TYPE_INDEX Y1725[];
+extern EIF_TYPE_INDEX *Y1725_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

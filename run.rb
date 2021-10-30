@@ -66,7 +66,8 @@ def run_example(doc, name, keep)
 
   FileUtils.rm_rf(name)
   f_code = "EIFGENs/#{PRJ}/F_code"
-  FileUtils.copy_entry(f_code, name)
+  FileUtils.mkdir_p('results')
+  FileUtils.copy_entry(f_code, "results/#{name}")
 
   runs = []
   ans = {

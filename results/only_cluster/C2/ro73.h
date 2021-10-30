@@ -1,0 +1,24 @@
+
+#ifndef _C2_ro73_
+#define _C2_ro73_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F91_1069(EIF_REFERENCE);
+extern EIF_REFERENCE F91_1070(EIF_REFERENCE);
+extern EIF_INTEGER_32 F91_1071(EIF_REFERENCE);
+RTOSHF (EIF_REFERENCE,1072)
+static EIF_REFERENCE F91_1072_body(EIF_REFERENCE);
+extern EIF_REFERENCE F91_1072(EIF_REFERENCE);
+extern void F91_1073(EIF_REFERENCE, EIF_REFERENCE);
+extern void F91_1074(EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit73(void);
+extern void F774_4677(EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
